@@ -16,7 +16,7 @@ def main(req: func.HttpRequest, msg: func.Out[func.QueueMessage]) -> func.HttpRe
             name = req_body.get('name')
 
     if name:
-        msg.set(f"### Request made for {name} at {datetime.datetime.now()}")
+        msg.set(f"### Request made for {name} with love at {datetime.datetime.now()}")
         return func.HttpResponse(f"Hello {name}!")
     else:
         return func.HttpResponse(
